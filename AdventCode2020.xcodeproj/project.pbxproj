@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		49068795257661D900B9BC18 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49068794257661D900B9BC18 /* main.swift */; };
+		4906879D257661EA00B9BC18 /* 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4906879C257661EA00B9BC18 /* 1.swift */; };
+		490687A02576625400B9BC18 /* 1-input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4906879F2576625400B9BC18 /* 1-input.swift */; };
+		490687A32576628200B9BC18 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490687A22576628200B9BC18 /* utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		49068791257661D900B9BC18 /* AdventCode2020 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventCode2020; sourceTree = BUILT_PRODUCTS_DIR; };
 		49068794257661D900B9BC18 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4906879C257661EA00B9BC18 /* 1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.swift; sourceTree = "<group>"; };
+		4906879F2576625400B9BC18 /* 1-input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1-input.swift"; sourceTree = "<group>"; };
+		490687A22576628200B9BC18 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				49068794257661D900B9BC18 /* main.swift */,
+				490687A22576628200B9BC18 /* utils.swift */,
+				4906879C257661EA00B9BC18 /* 1.swift */,
+				4906879F2576625400B9BC18 /* 1-input.swift */,
 			);
 			path = AdventCode2020;
 			sourceTree = "<group>";
@@ -120,6 +129,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				49068795257661D900B9BC18 /* main.swift in Sources */,
+				4906879D257661EA00B9BC18 /* 1.swift in Sources */,
+				490687A02576625400B9BC18 /* 1-input.swift in Sources */,
+				490687A32576628200B9BC18 /* utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

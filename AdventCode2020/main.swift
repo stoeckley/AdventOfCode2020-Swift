@@ -7,5 +7,5 @@
 
 import Foundation
 
-print("Hello, World!")
-
+print(solve1(readLines(input1)))
+print(solve1b(readLines(input1)))
