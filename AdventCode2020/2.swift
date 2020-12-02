@@ -7,8 +7,8 @@
 
 import Foundation
 
-func validPassword(_ line: [String]) -> Bool {
-    let minmax = line[0].components(separatedBy: "-")
+func validPassword(_ line: [Substring]) -> Bool {
+    let minmax = line[0].split(separator: "-")
     var n = 0
     for char in line[2] where char == line[1].first! {
         n += 1
@@ -25,8 +25,8 @@ func solve2(_ input: String) -> Int {
     return answer
 }
 
-func validPasswordb(_ line: [String]) -> Bool {
-    let minmax = line[0].components(separatedBy: "-")
+func validPasswordb(_ line: [Substring]) -> Bool {
+    let minmax = line[0].split(separator: "-")
     let min = Int(minmax[0])!
     let max = Int(minmax[1])!
     let letter = line[1].first!
@@ -52,7 +52,7 @@ func solve2b(_ input: String) -> Int {
 
 func alternate2(_ input: String) -> Int {
     return readLinesSplitSpaces(input).filter { line in
-        let minmax = line[0].components(separatedBy: "-")
+        let minmax = line[0].split(separator: "-")
         let count = line[2].filter { $0 == line[1].first! }.count
         return count >= Int(minmax[0])! && count <= Int(minmax[1])!
     }.count
@@ -60,7 +60,7 @@ func alternate2(_ input: String) -> Int {
 
 func alternate2b(_ input: String) -> Int {
     return readLinesSplitSpaces(input).filter { line in
-        let minmax = line[0].components(separatedBy: "-")
+        let minmax = line[0].split(separator: "-")
         let password = Array(line[2])
         let letter = line[1].first!
         let foundMin = password[Int(minmax[0])!-1] == letter

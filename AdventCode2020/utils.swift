@@ -7,15 +7,15 @@
 
 import Foundation
 
-func readLines(_ input: String) -> [String] {
-    return input.components(separatedBy: "\n")
+func readLines(_ input: String) -> [Substring] {
+    return input.split(separator: "\n")
 }
 
-func readLinesSplitSpaces(_ input: String) -> [[String]] {
+func readLinesSplitSpaces(_ input: String) -> [[Substring]] {
     let lines = readLines(input)
-    var output = [[String]]()
+    var output = [[Substring]]()
     for line in lines {
-        output.append(line.components(separatedBy: " "))
+        output.append(line.split(separator: " "))
     }
     return output
 }
