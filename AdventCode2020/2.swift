@@ -47,3 +47,24 @@ func solve2b(_ input: String) -> Int {
     }
     return answer
 }
+
+// Alternate solution without raw loops
+
+func alternate2(_ input: String) -> Int {
+    return readLinesSplitSpaces(input).filter { line in
+        let minmax = line[0].components(separatedBy: "-")
+        let count = line[2].filter { $0 == line[1].first! }.count
+        return count >= Int(minmax[0])! && count <= Int(minmax[1])!
+    }.count
+}
+
+func alternate2b(_ input: String) -> Int {
+    return readLinesSplitSpaces(input).filter { line in
+        let minmax = line[0].components(separatedBy: "-")
+        let password = Array(line[2])
+        let letter = line[1].first!
+        let foundMin = password[Int(minmax[0])!-1] == letter
+        let foundMax = password[Int(minmax[1])!-1] == letter
+        return (foundMin && !foundMax) || (!foundMin && foundMax)
+    }.count
+}
