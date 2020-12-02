@@ -7,15 +7,6 @@
 
 import Foundation
 
-func read2(_ input: String) -> [[String]] {
-    let lines = readLines(input)
-    var output = [[String]]()
-    for line in lines {
-        output.append(line.components(separatedBy: " "))
-    }
-    return output
-}
-
 func validPassword(_ line: [String]) -> Bool {
     let minmax = line[0].components(separatedBy: "-")
     var n = 0
@@ -26,7 +17,7 @@ func validPassword(_ line: [String]) -> Bool {
 }
 
 func solve2(_ input: String) -> Int {
-    let lines = read2(input)
+    let lines = readLinesSplitSpaces(input)
     var answer = 0
     for line in lines where validPassword(line){
         answer += 1
@@ -49,7 +40,7 @@ func validPasswordb(_ line: [String]) -> Bool {
 }
 
 func solve2b(_ input: String) -> Int {
-    let lines = read2(input)
+    let lines = readLinesSplitSpaces(input)
     var answer = 0
     for line in lines where validPasswordb(line){
         answer += 1
