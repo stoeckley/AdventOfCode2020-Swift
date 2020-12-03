@@ -25,6 +25,8 @@ func solve2(_ input: String) -> Int {
     return answer
 }
 
+// part 2
+
 func validPasswordb(_ line: [Substring]) -> Bool {
     let minmax = line[0].split(separator: "-")
     let min = Int(minmax[0])!
@@ -48,7 +50,7 @@ func solve2b(_ input: String) -> Int {
     return answer
 }
 
-// Alternate solution without raw loops
+// Alternate solutions without raw loops
 
 func alternate2(_ input: String) -> Int {
     return readLinesSplitSpaces(input).filter { line in
