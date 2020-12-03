@@ -7,7 +7,8 @@
 
 import Foundation
 
-func solve1(_ input: [Substring]) -> Int {
+func solve1(_ input: String) -> Int {
+    let input = readLines(input)
     for i in 0..<input.count {
         for j in i+1..<input.count {
             let a = Int(input[i])
@@ -20,7 +21,8 @@ func solve1(_ input: [Substring]) -> Int {
     return 0
 }
 
-func solve1b(_ input: [Substring]) -> Int {
+func solve1b(_ input: String) -> Int {
+    let input = readLines(input)
     for i in 0..<input.count {
         for j in i+1..<input.count {
             for k in j+1..<input.count {

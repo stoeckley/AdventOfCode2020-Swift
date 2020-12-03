@@ -8,7 +8,7 @@
 import Foundation
 
 func solve3(_ input: String) -> Int {
-    let lines = readLines(input).map { Array($0) }
+    let lines = readLinesToChars(input)
     var x = 0
     var trees = 0
     for y in 0..<lines.count {
@@ -23,7 +23,7 @@ func solve3(_ input: String) -> Int {
 // part 2
 
 func travel(_ input: String, _ xStride: Int, _ yStride: Int) -> Int {
-    let lines = readLines(input).map { Array($0) }
+    let lines = readLinesToChars(input)
     var x = 0
     var trees = 0
     for y in stride(from: 0, to: lines.count, by: yStride) {

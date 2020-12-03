@@ -11,11 +11,10 @@ func readLines(_ input: String) -> [Substring] {
     return input.split(separator: "\n")
 }
 
+func readLinesToChars(_ input: String) -> [[Substring.Element]] {
+    return readLines(input).map { Array($0) }
+}
+
 func readLinesSplitSpaces(_ input: String) -> [[Substring]] {
-    let lines = readLines(input)
-    var output = [[Substring]]()
-    for line in lines {
-        output.append(line.split(separator: " "))
-    }
-    return output
+    return readLines(input).map { $0.split(separator: " ")}
 }
