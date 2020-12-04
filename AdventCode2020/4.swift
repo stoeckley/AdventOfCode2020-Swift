@@ -11,10 +11,11 @@ func solve4(_ input: String) -> Int{
     let passports = input.components(separatedBy: "\n\n")
     let required = Set(["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"])
     return passports.filter {
-        let keys = Set($0.split(separator: "\n").flatMap {
-            $0.split(separator: " ").map { String($0.split(separator: ":").first!) }
-        })
-        return keys.intersection(required).count == required.count
+        Set($0.split(separator: "\n").flatMap {
+            $0.split(separator: " ").map {
+                String($0.split(separator: ":").first!)
+            }
+        }).intersection(required).count == required.count
     }.count
 }
 
@@ -71,7 +72,7 @@ func solve4b(_ input: String) -> Int{
     return passports.filter {
         Set($0.split(separator: "\n").flatMap {
             $0.split(separator: " ").map { validField($0) }
-        }.compactMap{$0})
+        }.compactMap{ $0 })
         .intersection(required).count == required.count
     }.count
 }
