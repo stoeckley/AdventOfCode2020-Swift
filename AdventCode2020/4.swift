@@ -23,14 +23,14 @@ func solve4(_ input: String) -> Int{
 
 func validateYear(_ value: String.SubSequence, low: Int, high: Int) -> Bool {
     if let year = Int(value) {
-        return year >= low && year <= high
+        return (low...high).contains(year)
     }
     return false
 }
 
 func validateHeight(_ value: String.SubSequence, low: Int, high: Int) -> Bool {
     if let value = Int(value.prefix(value.count-2)) {
-        return value >= low && value <= high
+        return (low...high).contains(value)
     }
     return false
 }
