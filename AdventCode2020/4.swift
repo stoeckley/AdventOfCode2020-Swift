@@ -36,10 +36,10 @@ func validateHeight(_ value: String.SubSequence, low: Int, high: Int) -> Bool {
 }
 
 func validateHair(_ value: String.SubSequence) -> Bool {
-    let contents = Set<Character>(["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"])
+    let contents = "0123456789abcdef"
     let valueContents = Set(value.dropFirst())
     return value.first! == "#" && value.count == 7 &&
-        valueContents.intersection(contents).count == valueContents.count
+        valueContents.intersection(Set(contents)).count == valueContents.count
 }
 
 func validField(_ field: Substring.SubSequence) -> String? {
