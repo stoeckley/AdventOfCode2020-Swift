@@ -69,15 +69,10 @@ func validField(_ field: Substring.SubSequence) -> String? {
 func solve4b(_ input: String) -> Int{
     let passports = input.components(separatedBy: "\n\n")
     let required = Set(["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"])
-    return passports.filter { passport in
-        var current = Set<String>()
-        for line in passport.split(separator: "\n") {
-            let _ = line.split(separator: " ").map { field in
-                if let code = validField(field){
-                    current.insert(code)
-                }
-            }
-        }
-        return current.intersection(required).count == required.count
+    return passports.filter { lines in
+        Set(lines.split(separator: "\n").flatMap { line in
+            line.split(separator: " ").map { validField($0) }
+        }.compactMap{$0})
+        .intersection(required).count == required.count
     }.count
 }
