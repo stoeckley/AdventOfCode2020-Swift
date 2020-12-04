@@ -10,12 +10,11 @@ import Foundation
 func solve4(_ input: String) -> Int{
     let passports = input.components(separatedBy: "\n\n")
     let required = Set(["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"])
-    return passports.filter { passport in
-        var current = Set<String>()
-        for line in passport.split(separator: "\n") {
-            let _ = line.split(separator: " ").map { current.insert(String($0.split(separator: ":").first!)) }
-        }
-        return current.intersection(required).count == required.count
+    return passports.filter {
+        let keys = Set($0.split(separator: "\n").flatMap {
+            $0.split(separator: " ").map { String($0.split(separator: ":").first!) }
+        })
+        return keys.intersection(required).count == required.count
     }.count
 }
 
@@ -69,9 +68,9 @@ func validField(_ field: Substring.SubSequence) -> String? {
 func solve4b(_ input: String) -> Int{
     let passports = input.components(separatedBy: "\n\n")
     let required = Set(["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"])
-    return passports.filter { lines in
-        Set(lines.split(separator: "\n").flatMap { line in
-            line.split(separator: " ").map { validField($0) }
+    return passports.filter {
+        Set($0.split(separator: "\n").flatMap {
+            $0.split(separator: " ").map { validField($0) }
         }.compactMap{$0})
         .intersection(required).count == required.count
     }.count
