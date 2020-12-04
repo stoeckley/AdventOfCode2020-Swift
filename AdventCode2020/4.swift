@@ -15,7 +15,7 @@ func solve4(_ input: String) -> Int{
             $0.split(separator: " ").map {
                 String($0.split(separator: ":").first!)
             }
-        }).intersection(required).count == required.count
+        }).intersection(required) == required
     }.count
 }
 
@@ -73,6 +73,6 @@ func solve4b(_ input: String) -> Int{
         Set($0.split(separator: "\n").flatMap {
             $0.split(separator: " ").map { validField($0) }
         }.compactMap{ $0 })
-        .intersection(required).count == required.count
+        .intersection(required) == required
     }.count
 }
