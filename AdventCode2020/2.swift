@@ -7,52 +7,7 @@
 
 import Foundation
 
-func validPassword(_ line: [Substring]) -> Bool {
-    let minmax = line[0].split(separator: "-")
-    var n = 0
-    for char in line[2] where char == line[1].first! {
-        n += 1
-    }
-    return n >= Int(minmax[0])! && n <= Int(minmax[1])!
-}
-
 func solve2(_ input: String) -> Int {
-    let lines = readLinesSplitSpaces(input)
-    var answer = 0
-    for line in lines where validPassword(line){
-        answer += 1
-    }
-    return answer
-}
-
-// part 2
-
-func validPasswordb(_ line: [Substring]) -> Bool {
-    let minmax = line[0].split(separator: "-")
-    let min = Int(minmax[0])!
-    let max = Int(minmax[1])!
-    let letter = line[1].first!
-    let password = Array(line[2])
-    let a = password[min-1] == letter
-    let b = password[max-1] == letter
-    if a && b {
-        return false
-    }
-    return a || b
-}
-
-func solve2b(_ input: String) -> Int {
-    let lines = readLinesSplitSpaces(input)
-    var answer = 0
-    for line in lines where validPasswordb(line){
-        answer += 1
-    }
-    return answer
-}
-
-// Alternate solutions without raw loops
-
-func alternate2(_ input: String) -> Int {
     return readLinesSplitSpaces(input).filter { line in
         let minmax = line[0].split(separator: "-")
         let count = line[2].filter { $0 == line[1].first! }.count
@@ -60,7 +15,9 @@ func alternate2(_ input: String) -> Int {
     }.count
 }
 
-func alternate2b(_ input: String) -> Int {
+// part 2
+
+func solve2b(_ input: String) -> Int {
     return readLinesSplitSpaces(input).filter { line in
         let minmax = line[0].split(separator: "-")
         let password = Array(line[2])

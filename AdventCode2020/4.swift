@@ -13,8 +13,7 @@ func solve4(_ input: String) -> Int{
     return passports.filter {
         Set($0.split(separator: "\n").flatMap {
             $0.split(separator: " ").map {
-                String($0.split(separator: ":").first!)
-            }
+                String($0.split(separator: ":").first!)}
         }).intersection(required) == required
     }.count
 }
