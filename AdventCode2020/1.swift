@@ -21,6 +21,8 @@ func solve1(_ input: String) -> Int {
     return 0
 }
 
+// part 2
+
 func solve1b(_ input: String) -> Int {
     let input = readLines(input)
     for i in 0..<input.count {
