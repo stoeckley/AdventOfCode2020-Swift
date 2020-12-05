@@ -23,3 +23,6 @@ import Foundation
 //print(solve4(input4)) // 208
 //print(solve4b(input4)) // 167
 
+// Day 5
+print(solve5(input5)) // 822
+print(solve5b(input5)) // 705
