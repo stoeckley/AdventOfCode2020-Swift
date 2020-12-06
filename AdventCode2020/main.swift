@@ -6,7 +6,7 @@
 //
 
 import Foundation
- 
+
 // Day 1
 //print(solve1(input1)) // 121396
 //print(solve1b(input1)) // 73616634
@@ -18,11 +18,15 @@ import Foundation
 // Day 3
 //print(solve3(input3)) // 284
 //print(solve3b(input3, [(1,1),(3,1),(5,1),(7,1),(1,2)])) // 3510149120
- 
+
 // Day 4
 //print(solve4(input4)) // 208
 //print(solve4b(input4)) // 167
 
 // Day 5
-print(solve5(input5)) // 822
-print(solve5b(input5)) // 705
+//print(solve5(input5)) // 822
+//print(solve5b(input5)) // 705
+
+// Day 6
+print(solve6(input6)) // 6351
+print(solve6b(input6)) // 3143
