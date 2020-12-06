@@ -24,3 +24,20 @@ func solve6b(_ input: String) -> Int {
         }.count
     }
 }
+
+/*
+ 
+ particularly nice solution from:
+ 
+ https://www.reddit.com/r/adventofcode/comments/k7ndux/2020_day_06_solutions/getpgnl/?utm_source=reddit&utm_medium=web2x&context=3
+ 
+ // process groups
+ let forms = input.components(separatedBy: .newlines).split(separator: "")
+ 
+ // part 1
+ forms.compactMap { f in Set(f.joined()).count }.reduce(0, +)
+ 
+ // part 2
+ forms.compactMap { g in g.reduce(Set(g.joined())) { r, e in r.intersection(Set(e)) }.count }.reduce(0, +)
+ 
+ */
