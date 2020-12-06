@@ -8,10 +8,11 @@
 import Foundation
 
 func solve6(_ input: String) -> Int {
-    return input.components(separatedBy: "\n\n").reduce(0) { result, group in
-        result + group.components(separatedBy: "\n").reduce(Set<Character>()) { $0.union(Set($1))
-        }.count
-    }
+    return input.components(separatedBy: "\n\n")
+        .map { $0.components(separatedBy: .newlines)}
+        .reduce(0) {
+            $0 + $1.reduce(Set<Character>()) { $0.union(Set($1)) }.count
+        }
 }
 
 // part 2
