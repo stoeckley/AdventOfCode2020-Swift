@@ -7,32 +7,31 @@
 
 import Foundation
 
-func search(child: String, dict: [String:Set<String>]) -> Set<String> {
-    var result = Set<String>()
-    if let parents = dict[child] {
-        for parent in parents {
-            result.insert(parent)
-            result.formUnion(search(child: parent, dict: dict))
-        }
+func search(child: String, graph: [String:Set<String>]) -> Set<String> {
+    return (graph[child] ?? []).reduce(into: Set<String>()) {
+        $0.insert($1)
+        $0.formUnion(search(child: $1, graph: graph))
     }
-    return result
 }
 
 func solve7(_ input: String) -> Int {
+    
     let rules = input.components(separatedBy: .newlines)
         .filter { !$0.contains("no other bags") }
         .map { $0.components(separatedBy: " bags contain ") }
-    let dict = rules.reduce(into: [String: Set<String>]()) { dict, rule in
+    
+    let graph = rules.reduce(into: [String : Set<String>]()) { graph, rule in
         let parent = rule.first!
         let children = rule[1].components(separatedBy: ",").map {
             $0.split(separator: " ")
         }
         for child in children {
             let color = child[1...2].joined(separator: " ")
-            dict[color, default: Set()].insert(parent)
+            graph[color, default: Set()].insert(parent)
         }
     }
-    return search(child: "shiny gold", dict: dict).count
+    
+    return search(child: "shiny gold", graph: graph).count
 }
 
 // part 2
@@ -42,21 +41,19 @@ struct Contents: Hashable {
     let color: String
 }
 
-func search2(parent: String, dict: [String:Set<Contents>]) -> Int {
-    var n  = 1
-    if let children = dict[parent] {
-        for child in children {
-            n += child.quantity * search2(parent: child.color, dict: dict)
-        }
+func search2(parent: String, graph: [String:Set<Contents>]) -> Int {
+    return (graph[parent] ?? []).reduce(1) {
+        $0 + $1.quantity * search2(parent: $1.color, graph: graph)
     }
-    return n
 }
 
 func solve7b(_ input: String) -> Int {
+    
     let rules = input.components(separatedBy: .newlines)
         .filter { !$0.contains("no other bags") }
         .map { $0.components(separatedBy: " bags contain ") }
-    let dict = rules.reduce(into: [String : Set<Contents>]()) { dict, rule in
+    
+    let graph = rules.reduce(into: [String : Set<Contents>]()) { graph, rule in
         let parent = rule.first!
         let children = rule[1].components(separatedBy: ",").map {
             $0.split(separator: " ")
@@ -64,8 +61,9 @@ func solve7b(_ input: String) -> Int {
         for child in children {
             let quantity = Int(child.first!)!
             let color = child[1...2].joined(separator: " ")
-            dict[parent, default: Set()].insert(Contents(quantity: quantity, color: color))
+            graph[parent, default: Set()].insert(Contents(quantity: quantity, color: color))
         }
     }
-    return search2(parent: "shiny gold", dict: dict) - 1
+    
+    return search2(parent: "shiny gold", graph: graph) - 1
 }
