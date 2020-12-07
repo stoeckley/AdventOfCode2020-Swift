@@ -13,6 +13,8 @@
 		490687A32576628200B9BC18 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490687A22576628200B9BC18 /* utils.swift */; };
 		490800512578CEF100CB3584 /* 4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490800502578CEF100CB3584 /* 4.swift */; };
 		490800542578CEFE00CB3584 /* 4-input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490800532578CEFE00CB3584 /* 4-input.swift */; };
+		494CA07A257E184100377502 /* 7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CA079257E184100377502 /* 7.swift */; };
+		494CA07D257E184800377502 /* 7-input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CA07C257E184800377502 /* 7-input.swift */; };
 		498F33A5257BECC900132D00 /* 5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F33A4257BECC900132D00 /* 5.swift */; };
 		498F33A8257BECD900132D00 /* 5-input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F33A7257BECD900132D00 /* 5-input.swift */; };
 		49CC20D9257CBEB70030483B /* 6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CC20D8257CBEB70030483B /* 6.swift */; };
@@ -43,6 +45,8 @@
 		490687A22576628200B9BC18 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		490800502578CEF100CB3584 /* 4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.swift; sourceTree = "<group>"; };
 		490800532578CEFE00CB3584 /* 4-input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4-input.swift"; sourceTree = "<group>"; };
+		494CA079257E184100377502 /* 7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7.swift; sourceTree = "<group>"; };
+		494CA07C257E184800377502 /* 7-input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7-input.swift"; sourceTree = "<group>"; };
 		498F33A4257BECC900132D00 /* 5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5.swift; sourceTree = "<group>"; };
 		498F33A7257BECD900132D00 /* 5-input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "5-input.swift"; sourceTree = "<group>"; };
 		49CC20D8257CBEB70030483B /* 6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 			children = (
 				49068794257661D900B9BC18 /* main.swift */,
 				490687A22576628200B9BC18 /* utils.swift */,
+				494CA079257E184100377502 /* 7.swift */,
+				494CA07C257E184800377502 /* 7-input.swift */,
 				49CC20D8257CBEB70030483B /* 6.swift */,
 				49CC20DB257CBEBD0030483B /* 6-input.swift */,
 				498F33A4257BECC900132D00 /* 5.swift */,
@@ -164,11 +170,13 @@
 				49068795257661D900B9BC18 /* main.swift in Sources */,
 				498F33A8257BECD900132D00 /* 5-input.swift in Sources */,
 				49EFDE9025777B0200123A73 /* 2.swift in Sources */,
+				494CA07A257E184100377502 /* 7.swift in Sources */,
 				490800512578CEF100CB3584 /* 4.swift in Sources */,
 				4906879D257661EA00B9BC18 /* 1.swift in Sources */,
 				49EFDE9325777B0B00123A73 /* 2-input.swift in Sources */,
 				498F33A5257BECC900132D00 /* 5.swift in Sources */,
 				490687A02576625400B9BC18 /* 1-input.swift in Sources */,
+				494CA07D257E184800377502 /* 7-input.swift in Sources */,
 				490800542578CEFE00CB3584 /* 4-input.swift in Sources */,
 				490687A32576628200B9BC18 /* utils.swift in Sources */,
 				49EFDE9825778C6500123A73 /* 3.swift in Sources */,
