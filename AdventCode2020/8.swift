@@ -16,10 +16,9 @@ func solve8(_ input: String) -> Int {
     
     var acc = 0
     var index = 0
-    while true {
-        let (code, value, n) = codes[index]
-        if n == 1 { break }
+    while codes[index].2 == 0 {
         codes[index].2 += 1
+        let (code, value, _) = codes[index]
         switch code {
         case "acc": acc += value; index += 1
         case "jmp": index += value
@@ -35,8 +34,7 @@ func solve8(_ input: String) -> Int {
 func run(_ codes: inout [(String, Int, Int)]) -> Int? {
     var acc = 0
     var index = 0
-    while true {
-        if index == codes.count { break }
+    while index != codes.count {
         let (code, value, n) = codes[index]
         if n == 1 { return nil }
         codes[index].2 += 1
