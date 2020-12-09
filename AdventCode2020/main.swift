@@ -37,5 +37,9 @@ import Foundation
 //print(solve7b(input7)) // 8030
 
 // Day 8
-print(solve8(input8)) // 1614
-print(solve8b(input8)) // 1260
+//print(solve8(input8)) // 1614
+//print(solve8b(input8)) // 1260
+
+// Day 9
+print(solve9(input9, 25)) // 177777905
+print(solve9b(input9, 25)) // 23463012
