@@ -27,7 +27,7 @@ func solve10b (_ input: String) -> Int {
     let nums = input.components(separatedBy: .newlines).map({ Int($0)! }).sorted()
     var dict = [0:1]
     for num in nums {
-        dict[num] = (dict[num-1] ?? 0) + (dict[num-2] ?? 0) + (dict[num-3] ??  0)
+        dict[num] = dict[num-1, default: 0] + dict[num-2, default: 0] + dict[num-3, default: 0]
     }
     return dict[nums.last!] ?? 0
 }
