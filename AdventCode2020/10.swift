@@ -31,3 +31,32 @@ func solve10b (_ input: String) -> Int {
     }
     return dict[nums.last!] ?? 0
 }
+
+
+// part 2 alternate solution
+// (my original, more verbose version)
+
+func search(_ nums: [Int], startIndex: Int, memo: inout [[Int]:Int]) -> Int {
+    var ret = 1
+    for (i, _) in nums.enumerated() where i + 2 < nums.count{
+        if nums[i + 2] <= nums[i] + 3 {
+            var copy = Array(nums[i...])
+            copy.remove(at: 1)
+            if let calc = memo[copy] {
+                ret += calc
+            } else {
+                memo[copy] = search(copy, startIndex: i, memo: &memo)
+                ret += memo[copy]!
+            }
+        }
+    }
+    return ret
+}
+
+func solve10c(_ input: String) -> Int {
+    let sortedNums = input.components(separatedBy: .newlines).map({ Int($0)! }).sorted()
+    let nums = [0] + sortedNums + [sortedNums.last! + 3]
+    var memo = [[Int]:Int]()
+    return search(nums, startIndex: 0, memo: &memo)
+}
+

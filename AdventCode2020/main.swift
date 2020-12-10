@@ -47,3 +47,4 @@ import Foundation
 // Day 10
 print(solve10(input10)) // 1885
 print(solve10b(input10)) // 2024782584832
+print(solve10c(input10)) // 2024782584832
