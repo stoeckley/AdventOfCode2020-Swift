@@ -45,6 +45,9 @@ import Foundation
 //print(solve9b(input9, 25)) // 23463012
 
 // Day 10
-print(solve10(input10)) // 1885
-print(solve10b(input10)) // 2024782584832
-print(solve10c(input10)) // 2024782584832
+//print(solve10(input10)) // 1885
+//print(solve10b(input10)) // 2024782584832
+
+// Day 11
+print(solve11(input11)) // 2204
+print(solve11b(input11)) // 1986
