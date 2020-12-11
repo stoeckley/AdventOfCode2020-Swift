@@ -13,8 +13,7 @@ func solve11(_ input: String) -> Int {
     func nOccupied(_ row: Int, _ col: Int) -> Int {
         var n = 0
         for r in -1...1 {
-            for c in -1...1 {
-                if r == 0 && c == 0 { continue }
+            for c in -1...1  where !(r == 0 && c == 0){
                 if (0..<seats.count).contains(row + r) &&
                     (0..<seats.first!.count).contains(col + c) &&
                     seats[row+r][col+c] == "#" {
@@ -70,8 +69,7 @@ func solve11b(_ input: String) -> Int {
     func nOccupied(_ row: Int, _ col: Int) -> Int {
         var n = 0
         for r in -1...1 {
-            for c in -1...1 {
-                if r == 0 && c == 0 { continue }
+            for c in -1...1 where !(r == 0 && c == 0) {
                 guard let ch = look(row,col,r,c) else {continue}
                 if ch == "#" {
                     n += 1
