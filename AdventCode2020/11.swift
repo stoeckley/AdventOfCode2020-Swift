@@ -39,7 +39,7 @@ func solve11(_ input: String) -> Int {
         seats = copy
     }
     
-    var last = [[String.Element]]()
+    var last = type(of: seats).init()
     var nIterations = 0
     while seats != last {
         last = seats
@@ -106,7 +106,7 @@ func solve11b(_ input: String) -> Int {
         seats = copy
     }
     
-    var last = [[String.Element]]()
+    var last = type(of: seats).init()
     var nIterations = 0
     while seats != last {
         last = seats
