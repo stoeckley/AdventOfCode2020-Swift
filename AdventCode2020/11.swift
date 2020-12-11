@@ -67,7 +67,7 @@ func solve11b(_ input: String) -> Int {
         }
     }
     
-    func nOccupied(seats: [[String.Element]],_ row: Int, _ col: Int) -> Int {
+    func nOccupied(_ row: Int, _ col: Int) -> Int {
         var n = 0
         for r in -1...1 {
             for c in -1...1 {
@@ -97,7 +97,7 @@ func solve11b(_ input: String) -> Int {
         var copy = seats
         for row in 0..<seats.count {
             for col in 0..<seats.first!.count {
-                let n = nOccupied(seats: seats, row, col)
+                let n = nOccupied(row, col)
                 if copy[row][col] == "L" && n == 0 {
                     copy[row][col] = "#"
                 } else if copy[row][col] == "#" && n >= 5 {
