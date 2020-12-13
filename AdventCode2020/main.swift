@@ -53,5 +53,16 @@ import Foundation
 //print(solve11b(input11)) // 1986
 
 // Day 12
-print(solve12(input12)) // 1032
-print(solve12b(input12)) // 156735
+//print(solve12(input12)) // 1032
+//print(solve12b(input12)) // 156735
+
+// Day 13
+print(solve13(input13)) // 2045
+print(solve13b(input13_sample)) // 1068781
+print(solve13b(input13_sampleb)) // 3417
+print(solve13b(input13_samplec)) // 754018
+print(solve13b(input13_sampled)) // 779210
+print(solve13b(input13_samplee)) // 1261476
+print(solve13b(input13_samplef)) // 1202161486
+print(solve13b(input13_sampleg)) // 3
+print(solve13b(input13)) // 402251700208309
