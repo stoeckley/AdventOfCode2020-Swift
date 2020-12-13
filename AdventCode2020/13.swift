@@ -31,13 +31,13 @@ func solve13(_ input: String) -> Int {
 func solve13b(_ input: String) -> Int {
     let lines = input.components(separatedBy: .newlines)
     let ids = lines[1].split(separator: ",").map {
-        (id: String.SubSequence) -> Int in return id == "x" ? 1 : Int(id)!
+        (id: String.SubSequence) -> Int in id == "x" ? 1 : Int(id)!
     }
     var inc = ids.first!
     var index = 1
     var t = inc
     while index < ids.count {
-        if (t + index) % ids[index]  == 0 {
+        if (t + index) % ids[index] == 0 {
             inc *= ids[index]
             index += 1
         } else {
