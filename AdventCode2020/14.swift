@@ -36,7 +36,7 @@ func solve14(_ input: String) -> Int {
         let num = Int(numStr)!
         dict[index] = shift(mask: Array(mask.reversed()), num: num)
     }
-    return dict.reduce(0) { r, kv in r + kv.value}
+    return dict.values.reduce(0,+)
 }
 
 // part 2
@@ -94,5 +94,5 @@ func solve14b(_ input: String) -> Int {
             dict[addy] = num
         }
     }
-    return dict.reduce(0) { r, kv in r + kv.value}
+    return dict.values.reduce(0,+)
 }
