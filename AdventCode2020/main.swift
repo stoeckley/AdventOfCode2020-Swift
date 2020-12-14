@@ -57,12 +57,16 @@ import Foundation
 //print(solve12b(input12)) // 156735
 
 // Day 13
-print(solve13(input13)) // 2045
-print(solve13b(input13_sample)) // 1068781
-print(solve13b(input13_sampleb)) // 3417
-print(solve13b(input13_samplec)) // 754018
-print(solve13b(input13_sampled)) // 779210
-print(solve13b(input13_samplee)) // 1261476
-print(solve13b(input13_samplef)) // 1202161486
-print(solve13b(input13_sampleg)) // 3
-print(solve13b(input13)) // 402251700208309
+//print(solve13(input13)) // 2045
+//print(solve13b(input13_sample)) // 1068781
+//print(solve13b(input13_sampleb)) // 3417
+//print(solve13b(input13_samplec)) // 754018
+//print(solve13b(input13_sampled)) // 779210
+//print(solve13b(input13_samplee)) // 1261476
+//print(solve13b(input13_samplef)) // 1202161486
+//print(solve13b(input13_sampleg)) // 3
+//print(solve13b(input13)) // 402251700208309
+
+// Day 14
+print(solve14(input14)) // 14862056079561
+print(solve14b(input14)) // 3296185383161
