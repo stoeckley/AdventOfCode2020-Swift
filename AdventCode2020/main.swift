@@ -68,5 +68,23 @@ import Foundation
 //print(solve13b(input13)) // 402251700208309
 
 // Day 14
-print(solve14(input14)) // 14862056079561
-print(solve14b(input14)) // 3296185383161
+//print(solve14(input14)) // 14862056079561
+//print(solve14b(input14)) // 3296185383161
+
+// Day 15
+print(solve15(2020,[0,3,6])) // 436
+print(solve15(2020,[2,1,3])) // 10
+print(solve15(2020,[1,2,3])) // 27
+print(solve15(2020,[2,3,1])) // 78
+print(solve15(2020,[3,2,1])) // 438
+print(solve15(2020,[3,1,2])) // 1836
+print(solve15(2020,[6,19,0,5,7,13,1])) // 468
+// part 2
+print(solve15(30000000,[0,3,6])) // 175594
+print(solve15(30000000,[1,3,2])) // 2578
+print(solve15(30000000,[2,1,3])) // 3544142
+print(solve15(30000000,[1,2,3])) // 261214
+print(solve15(30000000,[2,3,1])) // 6895259
+print(solve15(30000000,[3,2,1])) // 18
+print(solve15(30000000,[3,1,2])) // 362
+print(solve15(30000000,[6,19,0,5,7,13,1])) // 1801753
